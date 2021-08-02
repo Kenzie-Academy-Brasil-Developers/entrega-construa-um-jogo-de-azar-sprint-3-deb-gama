@@ -1,0 +1,72 @@
+
+body {
+    background-image:url(./img/teste5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.personagens {
+    width: 250px;
+    justify-content: center;
+    margin: 10px 60px; 
+}
+
+ul {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 200px;
+}
+
+li {
+    margin: 25px;
+}
+
+li img{
+    width: 75px;
+}
+
+ul img:hover {
+cursor: pointer;
+}
+
+
+@media (min-width: 700px){
+
+    .personagens {
+        width: 250px;
+        margin: 10px 350px; 
+      
+    }
+
+    li {
+        margin: 80px;
+        display: flex;
+    }
+    
+    li img{
+        width: 100px;
+        margin: 0 30px;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-top: 150px;
+    }
+
+
+}
+
+@media(max-width 1020px){
+
+    ul {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-top: 10px;
+    }
+
+
+
+}
+
