@@ -24,32 +24,50 @@ tesoura.addEventListener('click',()=>jogar(3))
 function jogar(escolha){
 let jogadorJogada = escolha;
 let computadorJogada = Math.floor(Math.random() * (3-1+1) +1);
-// let resultado = ""
+let resultado = "";
 
-// const display = document.getElementById("display");
-// display.innerText = '${resultado}'
+
+const display = document.getElementById("display");
+const jogador = document.createElement('p');
+jogador.innerText = 'resultado';
+display.appendChild(jogador);
+
 
 if (jogadorJogada === computadorJogada){
-    alert("Empate!");
+    resultado = "Empate!";
 }
 
 if(jogadorJogada > computadorJogada){
-    alert("Você ganhou!");
+    resultado = "Você ganhou!";
 }
 
 if(jogadorJogada < computadorJogada){
-    alert("Você perdeu!");
+    resultado = "Você perdeu!";
 }
 
 if(jogadorJogada === 3 && computadorJogada === 1){
-    alert("Você perdeu!");
+    resultado = "Você perdeu!";
 }
 
 if (jogadorJogada === 1 && computadorJogada === 3){
-    alert("Você ganhou!");
+    resultado = "Você ganhou!";
 }
  
 }
+
+
+
+
+    
+    
+    
+
+
+
+// display.innerText = '${resultado}'
+
+// selecionar o display
+// exibir a escolha do computador, da máquina e a frase de vitória
 
 
 
