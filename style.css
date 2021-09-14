@@ -1,25 +1,44 @@
 
 body {
-    /* background-image:url(./img/teste5.jpg); */
+    background-image:url(./img/teste5.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-
+    height: 100vh;
+    margin: 0 auto;
+    border: solid red 1px;
 }
+
+div.personagens_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.max-container {
+  
+   
+}
+
 
 .personagens {
     width: 250px;
-    justify-content: center;
-    margin: 10px 60px; 
+    padding: 10px;
+
 }
 
 ul {
+    position: relative;
     display: flex;
     flex-wrap: nowrap;
-    margin-top: 200px;
+    justify-content: center;
+    align-items: center;
+    border: solid blue 1px;
+    margin-top: 70%;
+    height: 80px;
 }
 
 li {
-    margin: 25px;
+    margin: 20px;
 }
 
 li img{
@@ -31,42 +50,71 @@ cursor: pointer;
 }
 
 
-@media (min-width: 700px){
+@media screen and (min-width: 768px){
 
     .personagens {
-        width: 250px;
-        margin: 10px 350px; 
-      
+        width: 300px;
+
+    }
+    
+    div.max-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+       justify-content: space-between;
+        
+        border: solid pink 1px;
+    }
+
+    section.gameBody {
+        width: 100px;
+        display: flex;
+        justify-content: center;
+       
+    }
+
+    /* ul {
+        margin-top: 30%;
+        height: 120px;
+        border: solid orange 1px;
     }
 
     li {
-        margin: 80px;
+        margin: 50px;
         display: flex;
     }
     
     li img{
         width: 100px;
         margin: 0 30px;
-    }
+        border: solid red 1px;
+    } */
 
     ul {
+       
+        border: solid blue 1px;
         display: flex;
-        flex-wrap: nowrap;
-        margin-top: 150px;
+        flex-direction: column;
+        margin-top: 25%;
+        height: 400px;
+        
+      
+    }
+
+
+    li img{
+        width: 100px;
+        margin: 0 30px;
+  
+    }
+
+    li img:hover{
+      
+        width: 150px;
     }
 
 
 }
 
-@media(max-width 1020px){
 
-    ul {
-        display: flex;
-        flex-wrap: nowrap;
-        margin-top: 10px;
-    }
-
-
-
-}
 
