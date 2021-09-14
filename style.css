@@ -5,7 +5,15 @@ body {
     background-size: cover;
     height: 100vh;
     margin: 0 auto;
-    border: solid red 1px;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    font-size: 3rem;
+    padding: 5px;
+    
 }
 
 div.personagens_container{
@@ -14,14 +22,27 @@ div.personagens_container{
     align-items: center;
 }
 
-div.max-container {
-  
-   
+
+
+div.max-container{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+div#display {
+    width: 300px;
+    height: 150px;
+    margin: 0 auto;
+    background-color: grey;
+    border: solid grey 1px;
 }
 
 
 .personagens {
-    width: 250px;
+    width: 200px;
     padding: 10px;
 
 }
@@ -32,8 +53,8 @@ ul {
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    border: solid blue 1px;
-    margin-top: 70%;
+
+    margin-top: 10%;
     height: 80px;
 }
 
@@ -52,51 +73,52 @@ cursor: pointer;
 
 @media screen and (min-width: 768px){
 
-    .personagens {
-        width: 300px;
-
+    h1 {
+        font-size: 5rem;
     }
+
+  
+
+    div.personagens_container img{
+        width: 250px;
+        padding: 0;
+    }
+    div#display {
+        width: 400px;
+        height: 300px;
+        margin: 15px;
+       
+    }
+
+    div.personagens_container{
+        width: 150px;
+    }
+
     
+
+
     div.max-container {
+        height: 80vh;
         display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-       justify-content: space-between;
-        
-        border: solid pink 1px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px;
     }
 
     section.gameBody {
         width: 100px;
-        display: flex;
-        justify-content: center;
-       
     }
 
-    /* ul {
-        margin-top: 30%;
-        height: 120px;
-        border: solid orange 1px;
-    }
-
-    li {
-        margin: 50px;
-        display: flex;
-    }
-    
-    li img{
-        width: 100px;
-        margin: 0 30px;
-        border: solid red 1px;
-    } */
 
     ul {
-       
-        border: solid blue 1px;
+ 
         display: flex;
+        align-items: center;
         flex-direction: column;
         margin-top: 25%;
         height: 400px;
+        width: 150px;
         
       
     }
@@ -104,7 +126,8 @@ cursor: pointer;
 
     li img{
         width: 100px;
-        margin: 0 30px;
+        margin-right: 50px;
+   
   
     }
 
