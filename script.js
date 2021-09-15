@@ -24,6 +24,9 @@ tesoura.addEventListener('click',()=>jogar(3))
 
 function jogar(escolha){
 
+const display = document.getElementById("display");
+display.innerHTML = "";
+
 let jogadorJogada = escolha;
 let computadorJogada = Math.floor(Math.random() * (3-1+1) +1);
 
@@ -67,7 +70,8 @@ if (jogadorJogada === 1 && computadorJogada === 3){
 
 
 
-const display = document.getElementById("display");
+
+
 const computadorOpcao = document.createElement('p');
 const computadorConteudo = `${opcao}`;
 computadorOpcao.innerText = computadorConteudo;
@@ -77,6 +81,8 @@ const vitoria = document.createElement('p');
 const vitoriaConteudo = `${resultado}`;
 vitoria.innerText = vitoriaConteudo;
 display.appendChild(vitoria);
+
+
 
 
 
