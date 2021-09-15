@@ -2,12 +2,13 @@
 //jogador vai escolher pedra papel ou tesoura e o computador vai gerar o aleatório
 
 //quando o jogador fizer a escolha, o botão deve disparar a função que compara com a escolha do computador
-// pedra = 1;
-// papel = 2;
-// tesoura = 3;
+
 
 // let computadorJogada = 0;
 // let jogadorJogada = 0;
+// pedra = 1;
+// papel = 2;
+// tesoura = 3;
 
 
 const pedra = document.getElementById("opcaoPedra");
@@ -22,15 +23,25 @@ tesoura.addEventListener('click',()=>jogar(3))
 
 
 function jogar(escolha){
+
 let jogadorJogada = escolha;
 let computadorJogada = Math.floor(Math.random() * (3-1+1) +1);
+
+
+let opcao = "";
+
+if (computadorJogada === 1){
+    opcao = "Computador escolheu Pedra";
+}
+if (computadorJogada === 2){
+    opcao = "Computador escolheu Papel";
+}
+if (computadorJogada === 3){
+    opcao = "Computador escolheu Tesoura";
+}
+
+
 let resultado = "";
-
-
-const display = document.getElementById("display");
-const jogador = document.createElement('p');
-jogador.innerText = 'resultado';
-display.appendChild(jogador);
 
 
 if (jogadorJogada === computadorJogada){
@@ -52,6 +63,24 @@ if(jogadorJogada === 3 && computadorJogada === 1){
 if (jogadorJogada === 1 && computadorJogada === 3){
     resultado = "Você ganhou!";
 }
+
+
+
+
+const display = document.getElementById("display");
+const computadorOpcao = document.createElement('p');
+const computadorConteudo = `${opcao}`;
+computadorOpcao.innerText = computadorConteudo;
+display.appendChild(computadorOpcao);
+
+const vitoria = document.createElement('p');
+const vitoriaConteudo = `${resultado}`;
+vitoria.innerText = vitoriaConteudo;
+display.appendChild(vitoria);
+
+
+
+
  
 }
 
