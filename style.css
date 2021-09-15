@@ -1,4 +1,30 @@
 
+@keyframes go-back {
+    from {
+      transform: translateX(10px);
+    }
+    to {
+      transform: translateX(0);
+    }
+    from {
+        transform: translateY(10px);
+    }
+      
+  }
+
+  @keyframes flipper {
+    from {
+        transform: rotateY(180deg);
+    }
+    to {
+      transform: rotateX(0);
+    }
+    from {
+        transform: rotateX(180deg);
+    }
+  }
+
+
 body {
     background-image:url(./img/teste5.jpg);
     background-repeat: no-repeat;
@@ -13,48 +39,28 @@ h1 {
     font-family: 'Kanit', sans-serif;
     font-size: 3rem;
     padding: 5px;
-    
 }
 
 
-@keyframes go-back {
-    from {
-      transform: translateX(10px);
-    }
-    to {
-      transform: translateX(0);
-    }
-    from {
-        transform: translateY(10px);
-      }
-      
-  }
+footer {
+    color: #fff;
+    text-align: center;
+    background-color:rgba(0, 0, 0, 0.157); ;
+}
 
-  @keyframes flipper {
-    from {
-        transform: rotateY(180deg);
-    }
-    to {
-      transform: rotateX(0);
-    }
-    from {
-        transform: rotateX(180deg);
-      }
-      
-  }
+
 div.instrucao{
-      width: 300px;
-      margin: 0 auto;
-  }
+    width: 300px;
+    margin: 0 auto;
+}
+
 
 div.instrucao p {
     color: #fff;
     text-align: center;
     font-size: 1.2rem;
     font-family:'Courier New', Courier, monospace;
-
     animation: go-back 1s infinite alternate;
-    
 }
 
 div.personagens_container{
@@ -62,7 +68,6 @@ div.personagens_container{
     justify-content: center;
     align-items: center;
 }
-
 
 
 div.max-container{
@@ -87,9 +92,7 @@ div#display p {
     padding: 10px;
     text-shadow: 5px;
     background-color:#000;
-    
 }
-
 
 .personagens {
     width: 200px;
@@ -116,7 +119,7 @@ li img{
 
 ul img:hover {
 cursor: pointer;
-animation: flipper 0.5s ;
+animation: flipper 0.3s ;
 }
 
 
@@ -130,10 +133,7 @@ animation: flipper 0.5s ;
         background-color: rgba(0, 0, 0, 0.157);
         font-size: 2.5rem;
         text-shadow: 10px;
-    
     }
-
-  
 
     div.personagens_container img{
         width: 250px;
@@ -165,27 +165,19 @@ animation: flipper 0.5s ;
 
 
     ul {
- 
         display: flex;
         align-items: center;
         flex-direction: column;
         margin-top: 25%;
         height: 400px;
         width: 150px;
-        
-      
     }
 
 
     li img{
         width: 100px;
         margin-right: 50px;
-   
-  
     }
-
-  
-
 
 }
 

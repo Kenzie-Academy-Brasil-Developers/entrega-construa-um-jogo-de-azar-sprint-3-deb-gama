@@ -69,9 +69,6 @@ if (jogadorJogada === 1 && computadorJogada === 3){
 
 
 
-
-
-
 const computadorOpcao = document.createElement('p');
 const computadorConteudo = `${opcao}`;
 computadorOpcao.innerText = computadorConteudo;
@@ -81,10 +78,6 @@ const vitoria = document.createElement('p');
 const vitoriaConteudo = `${resultado}`;
 vitoria.innerText = vitoriaConteudo;
 display.appendChild(vitoria);
-
-
-
-
 
 
  
