@@ -24,8 +24,13 @@ tesoura.addEventListener('click',()=>jogar(3))
 
 function jogar(escolha){
 
+setTimeout(function(){ 
+
 const display = document.getElementById("display");
+display.className = 'show';
+
 display.innerHTML = "";
+
 
 let jogadorJogada = escolha;
 let computadorJogada = Math.floor(Math.random() * (3-1+1) +1);
@@ -35,12 +40,17 @@ let opcao = "";
 
 if (computadorJogada === 1){
     opcao = "Computador escolheu Pedra";
+ 
+
 }
 if (computadorJogada === 2){
     opcao = "Computador escolheu Papel";
+  
+    
 }
 if (computadorJogada === 3){
     opcao = "Computador escolheu Tesoura";
+    
 }
 
 
@@ -49,23 +59,30 @@ let resultado = "";
 
 if (jogadorJogada === computadorJogada){
     resultado = "Empate!";
+   
+  
 }
 
 if(jogadorJogada > computadorJogada){
     resultado = "Você ganhou!";
+
 }
 
 if(jogadorJogada < computadorJogada){
     resultado = "Você perdeu!";
+   
 }
 
 if(jogadorJogada === 3 && computadorJogada === 1){
     resultado = "Você perdeu!";
+    
 }
 
 if (jogadorJogada === 1 && computadorJogada === 3){
     resultado = "Você ganhou!";
+    
 }
+
 
 
 
@@ -78,6 +95,10 @@ const vitoria = document.createElement('p');
 const vitoriaConteudo = `${resultado}`;
 vitoria.innerText = vitoriaConteudo;
 display.appendChild(vitoria);
+
+}, 1000);
+
+display.className = 'hidden';
 
 
  
